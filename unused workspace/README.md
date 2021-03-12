@@ -9,7 +9,7 @@ Jenis code editor yang digunakan beserta ekstensi workspacenya
 
 Ketika developer hanya menggunakan satu jenis code editor, maka workspace yang tidak digunakan akan ditempatkan di folder unused workspace.
 
-Ketika sebuah workspace diletakkan di folder ini, maka secara otomatis workspace tersebut tidak boleh dibuka dan digunakan terlebih dahulu karena berpotensi untuk merusak data yang ada di dalam file workspace tersebut.
+Ketika sebuah workspace diletakkan di folder ini, maka secara otomatis workspace tersebut tidak boleh dibuka dan digunakan terlebih dahulu karena berpotensi untuk merusak data yang ada di dalam file workspace tersebut. Karena itulah file tersebut dibuat menjadi hidden.
 
 Supaya bisa menggunakan workspace yang berada di folder unused workspace, developer wajib memindahkan workspace tersebut di luar folder unused workspace.
 
