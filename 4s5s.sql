@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 18, 2021 at 07:04 AM
+-- Generation Time: Mar 18, 2021 at 09:16 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.1
 
@@ -41,7 +41,8 @@ CREATE TABLE `blog` (
 INSERT INTO `blog` (`id_blog`, `judul_blog`, `nama_editor`, `isi_blog`) VALUES
 (12, 'Susu', 'Khenjy', 'Susu mengandung kalsium'),
 (15, 'Soya', 'Khenjy', 'Soya berasal dari kacang kedelai.'),
-(17, 'makanan', 'khenjy', 'Susu mengandung kalsium');
+(17, 'makanan', 'khenjy', 'Susu mengandung kalsium'),
+(18, 'makanan', 'khenjy', 'makanan sangatlah sehat');
 
 -- --------------------------------------------------------
 
@@ -80,6 +81,13 @@ CREATE TABLE `komentar` (
   `isi` text NOT NULL,
   `tglkomen` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `komentar`
+--
+
+INSERT INTO `komentar` (`id_komentar`, `judul_blog`, `nama`, `email`, `isi`, `tglkomen`) VALUES
+(1, 'Makanan', 'Khenjy Johnelson', 'khenjyjohnelson@outlook.com', 'terima kasih atas infonya min', '2021-03-18');
 
 -- --------------------------------------------------------
 
@@ -127,7 +135,7 @@ ALTER TABLE `viewer`
 -- AUTO_INCREMENT for table `blog`
 --
 ALTER TABLE `blog`
-  MODIFY `id_blog` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id_blog` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `editor`
@@ -139,7 +147,7 @@ ALTER TABLE `editor`
 -- AUTO_INCREMENT for table `komentar`
 --
 ALTER TABLE `komentar`
-  MODIFY `id_komentar` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_komentar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `viewer`
