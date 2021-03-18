@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 09, 2021 at 02:54 PM
+-- Generation Time: Mar 18, 2021 at 07:04 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.1
 
@@ -39,19 +39,9 @@ CREATE TABLE `blog` (
 --
 
 INSERT INTO `blog` (`id_blog`, `judul_blog`, `nama_editor`, `isi_blog`) VALUES
-(1, '0', 'khenjy', 'isi'),
-(2, 'tes', 'tes', 'tes'),
-(3, 'tes', 'tes', 'ts'),
-(4, 'tes', 'tes', 'ts'),
-(5, 'tes', 'tes', 'ts'),
-(6, 'khenjy', 'khenjy', 'isi'),
-(7, 'khenjy', 'khenjy', 'isi'),
-(8, 'makanan', 'khenjy', 'isi'),
-(9, 'khenjy', 'khenjy', 'isi'),
-(10, 'khenjy', 'khenjy', 'isi'),
-(11, 'tes', 'tes', 'tes'),
 (12, 'Susu', 'Khenjy', 'Susu mengandung kalsium'),
-(13, 'tes', 'tes', 'tes');
+(15, 'Soya', 'Khenjy', 'Soya berasal dari kacang kedelai.'),
+(17, 'makanan', 'khenjy', 'Susu mengandung kalsium');
 
 -- --------------------------------------------------------
 
@@ -64,9 +54,17 @@ CREATE TABLE `editor` (
   `nama` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
-  `telp` int(20) NOT NULL,
+  `telp` varchar(20) NOT NULL,
   `tglgabung` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `editor`
+--
+
+INSERT INTO `editor` (`id_editor`, `nama`, `email`, `password`, `telp`, `tglgabung`) VALUES
+(0, 'Khenjy J', 'khenjyjohnelson@outlook.com', '123456', '1234567890123', '2021-03-16'),
+(3, 'Khenjy Johnelson', 'khenjyjohnelson123@gmail.com', '12345', '1234567890123', '2021-03-18');
 
 -- --------------------------------------------------------
 
@@ -76,7 +74,7 @@ CREATE TABLE `editor` (
 
 CREATE TABLE `komentar` (
   `id_komentar` int(11) NOT NULL,
-  `judul` varchar(50) NOT NULL,
+  `judul_blog` varchar(50) NOT NULL,
   `nama` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
   `isi` text NOT NULL,
@@ -129,13 +127,13 @@ ALTER TABLE `viewer`
 -- AUTO_INCREMENT for table `blog`
 --
 ALTER TABLE `blog`
-  MODIFY `id_blog` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_blog` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `editor`
 --
 ALTER TABLE `editor`
-  MODIFY `id_editor` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_editor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `komentar`
